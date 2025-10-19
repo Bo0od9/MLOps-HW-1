@@ -79,12 +79,10 @@ class FileHandler(FileSystemEventHandler):
         self._last_processed = None
 
     def _maybe_process(self, path: Path):
-        if path.is_dir():
+        if path.is_dir() or path.suffix.lower() != ".csv":
             return
-
-        if path.suffix.lower() != ".csv":
+        if path.name != "test.csv":
             return
-
         if self._last_processed == path:
             return
 

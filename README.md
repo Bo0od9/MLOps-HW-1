@@ -59,6 +59,8 @@ docker run -it --rm \
 
 ### Положить файл для предсказания
 
+Обязательно с именем **`test.csv`**:
+
 ```bash
 cp some_file.csv input/test.csv
 ```
@@ -81,8 +83,9 @@ cp some_file.csv input/test.csv
 
 ## Возможные ошибки
 
-| Проблема               | Решение                                    |
-| ---------------------- | ------------------------------------------ |
-| `Model file not found` | Проверь, что `models/model.cbm` существует |
-| `Matplotlib GUI error` | Установить `MPLBACKEND=Agg`                |
-| Нет вывода             | Проверь `logs/service.log`                 |
+| Проблема               | Решение                                     |
+| ---------------------- | ------------------------------------------- |
+| `Model file not found` | Проверь, что `models/model.cbm` существует  |
+| `Matplotlib GUI error` | Установить `MPLBACKEND=Agg`             |
+| Сервис не реагирует    | Имя файла должно быть **строго** `test.csv` |
+| Нет вывода             | Проверь `logs/service.log`                  |
