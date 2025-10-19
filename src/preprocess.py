@@ -8,7 +8,6 @@ import yaml
 from haversine import haversine_vector
 
 logger = logging.getLogger(__name__)
-cfg = yaml.safe_load(open("configs/config.yaml"))
 
 
 def preprocess_data(df: pd.DataFrame, cfg: dict) -> pd.DataFrame:
